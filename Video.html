@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>HTML 5 Welcome</title>
+    </head>
+    <body>
+        <h1>Welcome to html 8
+        </h1>
+        <h3>video</h3>
+        <video id="myvideo" width="400"   controls loop muted> 
+          <source src="SampleVideo_1280x720_5mb.mp4">
+            <source src="SampleVideo_1280x720_5mb.avi">
+
+                <source src="SampleVideo_1280x720_5mb.ogg">
+        </video>
+        <h4>Audio</h4>
+        <audio     auto controls loop muted> 
+            <source src="SampleAudio_0.7mb.mp3">
+              
+                  </audio>
+       <br>
+          <button id="playid" onclick="videoplay()">play</button>
+          <button id="pauseid" onclick="videopause()" disabled>pause</button>
+
+
+        <h3>Youtube</h3>
+        <iframe src="https://www.youtube.com/embed/bOJqTkeW5lA/"></iframe>
+        <script>
+           var videoref = document.getElementById("myvideo")
+           var playref = document.getElementById("playid")
+           var pauseref = document.getElementById("pauseid")
+           var videoplay = function(){
+               console.log("Hello from play video")
+               videoref.play()
+               playref.disabled = true
+               pauseref.disabled = false
+           }
+           var videopause = function(){
+               console.log("Hello from pause video")
+               videoref.pause()
+               pauseref.disabled = true
+               playref.disabled = false
+           }
+           
+        </script>
+    </body>
+</html>
